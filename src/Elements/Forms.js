@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const colores = {
   borde: "#0075FF",
-  error: "#bb2929",
+  error: "#f66060",
   exito: "#1ed12d",
   hover: "#196C84",
 };
@@ -11,6 +11,7 @@ const Form = styled.form`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  margin: 100px;
   @media (max-width: 800px) {
     grid-template-columns: 1fr;
   }
@@ -60,7 +61,72 @@ const IconoValidacion = styled(FontAwesomeIcon)`
   bottom: 10px;
   z-index: 100;
   font-size: 24px;
-  //opacity: 0;
+  opacity: 0;
 `;
 
-export { Form, Label, GrupoInput, Input, LeyendaError, IconoValidacion };
+const ContenedorTerminos = styled.div`
+  grid-column: span 2;
+  input {
+    margin-right: 15px;
+  }
+`;
+
+const ContenedorBtnEnvio = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: span 2;
+`;
+
+const Boton = styled.button`
+  height: 45px;
+  line-height: 45px;
+  width: 100px;
+  background-color: #222;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1 ease all;
+  &:hover {
+    box-shadow: 5px 0px 30px grey;
+  }
+`;
+
+const MensajeExito = styled.p`
+  font-size: 14px;
+  color: ${colores.exito};
+  display: none;
+`;
+
+const MensajeError = styled.div`
+  display: flex;
+  width: 60%;
+  height: 50px;
+  background-color: ${colores.error};
+  padding: 15px 15px 0 15px;
+  border-radius: 5px;
+  grid-column: span 2;
+  p {
+    margin: 0;
+    text-align: center;
+  }
+  b {
+    margin-left: 40px;
+  }
+`;
+
+export {
+  Form,
+  Label,
+  GrupoInput,
+  Input,
+  LeyendaError,
+  IconoValidacion,
+  ContenedorTerminos,
+  ContenedorBtnEnvio,
+  Boton,
+  MensajeExito,
+  MensajeError,
+};
