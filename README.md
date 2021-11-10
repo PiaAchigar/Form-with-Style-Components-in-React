@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting a Form with React and Style-Components 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hi, here is the form of the proyecto HOLD_UP for CodeHachathon.
 
 ## Available Scripts
 
