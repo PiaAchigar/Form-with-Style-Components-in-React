@@ -18,7 +18,7 @@ const Main = styled.main`
   justify-content: center;
 `;
 
-const Form = styled.form`
+const FormLabel = styled.form`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -168,7 +168,7 @@ const MensajeError = styled.div`
 
 export {
   Main,
-  Form,
+  FormLabel,
   Label,
   GrupoInput,
   Input,

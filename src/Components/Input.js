@@ -5,13 +5,13 @@ import {
   LeyendaError,
   IconoValidacion,
   Input,
-} from "../Elements/Forms";
+} from "../Elements/StylesForms";
 import {
   faCheckCircle,
   faTimesCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-const ComponenteInput = ({
+const ComponentInput = ({
   estado,
   setEstado,
   label,
@@ -89,4 +89,4 @@ const ComponenteInput = ({
   );
 };
 
-export default ComponenteInput;
+export default ComponentInput;
