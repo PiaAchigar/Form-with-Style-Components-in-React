@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Main,
   Form,
   Label,
   ContenedorTerminos,
@@ -51,7 +52,7 @@ function App() {
     }
   };
   return (
-    <main>
+    <Main>
       <Form action="">
         <Input
           estado={nombre}
@@ -172,7 +173,7 @@ function App() {
           <MensajeExito>El Formulario se envio exitosamente!</MensajeExito>
         </ContenedorBtnEnvio>
       </Form>
-    </main>
+    </Main>
   );
 }
 export default App;
