@@ -13,6 +13,8 @@ import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 
 import Input from "./Components/Input";
 
+import Axios from 'axios'
+
 function App() {
   //coloco el estado de validación de cada campo, para poder despues validar todo el formulario de una.
   const [nombre, setNombre] = useState({ campo: "", valido: null }); // campo: lo que ingrese el usuario(string), valido: para q me pinte de verde o rojo (true/false)
@@ -29,9 +31,60 @@ function App() {
   const [telefono, setTelefono] = useState({ campo: "", valido: null });
   const [logo, setLogo] = useState({ campo: "", valido: null });
   const [terminos, setTerminos] = useState(false);
+  const [formValido , setFormValido] = useState(null)
+
   const checkTerminos = (e) =>{
     setTerminos(e.target.checked)
   }
+  
+  const onSubmit = (e) =>{
+    e.preventDefault()
+    
+    if (  nombre.valido=== 'true' &&
+    apellido.valido==='true'&&
+    email.valido==='true'&&
+    pais.valido==='true'&&
+    descripcion.valido==='true'&&
+    password.valido==='true'&&
+    password2.valido==='true'&&
+    terminos === true
+    ){sendData()
+      restartForm()
+      setFormValido(true)}
+    else
+    {setFormValido(false)}
+}
+    
+
+    const sendData= ()=>{
+
+      const newUser = {
+      nombre : nombre.campo,
+      apellido: apellido.campo,
+      email: email.campo,
+      pais: pais.campo,
+      descripcion: descripcion.campo,
+      password: password.campo,
+      proyecto: nombreEmprendimiento.campo,
+      telefono: telefono.campo,
+      terminos: terminos
+    } 
+      
+    Axios.post('https://jsonplaceholder.typicode.com/posts', newUser)
+      .then( res => console.log(res))
+      .catch(err => console.log(err))
+    }
+
+     const restartForm = () =>{
+      setNombre({ campo: "", valido: null })
+      setApellido({ campo: "", valido: null })
+      setPassword({ campo: "", valido: null })
+      setPassword2({ campo: "", valido: null })
+      setEmail({ campo: "", valido: null })
+      setNombreEmprendimiento({ campo: "", valido: null })
+      setPais({ campo: "", valido: null })
+    }   
+
 
   const expresiones = {
     usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
@@ -39,6 +92,7 @@ function App() {
     password: /^.{4,12}$/, // 4 a 12 digitos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+    description: /^[a-zA-ZÀ-ÿ\s]{1,40}$/
   };
 
   const validarPasword2 = () => {
@@ -56,7 +110,7 @@ function App() {
   };
   return (
     <main>
-      <Form action="">
+      <Form action="" onSubmit={onSubmit}>
         <Input
           estado={nombre}
           setEstado={setNombre}
@@ -125,7 +179,7 @@ function App() {
           name="descripcion"
           placeholder="Contanos sobre tu emprendimiento..."
           leyendaError="Necesitamos que nos cuentes sobre tu emprendimeito "
-          expresionRegular=""
+          expresionRegular={expresiones.description}
         />
         <Input
           estado={pais}
@@ -145,9 +199,9 @@ function App() {
           name="telefono"
           placeholder="Escribe tu telefono - no es obligatorio..."
           leyendaError="😜"
-          expresionRegular={expresiones.telefono}
+          expresionRegular=""
         />
-        <Input
+      {/*   <Input
           estado={logo}
           setEstado={setLogo}
           label="Logo"
@@ -156,24 +210,39 @@ function App() {
           placeholder="Examinar archivo"
           leyendaError="😜"
           expresionRegular=""
-        />
+        /> */}
         <ContenedorTerminos>
           <Label>
             <input type="checkbox" name="terminos" id="terminos" checked={terminos} onChange={checkTerminos}/>
             Acepto los terminos y condiciónes
           </Label>
         </ContenedorTerminos>
-        {false && (
+        {formValido===false && (
           <MensajeError>
+            <div>
             <FontAwesomeIcon icon={faExclamationTriangle} />
-            <p>
+              <p>
               <b>Error:</b> Faltan cositas en el formulario por completar 😉
-            </p>
+              </p>
+            </div>
           </MensajeError>
         )}
         <ContenedorBtnEnvio>
-          <Boton type="submit">_enviar</Boton>
-          <MensajeExito>El Formulario se envio exitosamente!</MensajeExito>
+          <Boton type="submit">Enviar</Boton>
+       {formValido===true &&  
+       (<MensajeExito>
+        <FontAwesomeIcon icon={faExclamationTriangle} />
+        <p>
+          <b>Yey!!</b> El formulario se envió exitosamente! 😉
+        </p>
+      {/*   <MensajeExito>El Formulario se envio exitosamente!</MensajeExito> */}
+      </MensajeExito>
+      
+      )
+        
+       
+       
+       }
         </ContenedorBtnEnvio>
       </Form>
     </main>
