@@ -4,21 +4,31 @@ import Header from "./Components/Header"
 import Footer  from "./Components/Footer";
 import Formulario from "./Components/Form";
 import Index from "./Components/Index";
-
-
+ 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom'
+ 
 function App() {
   return (
-    <DivApp>
+
+    <Router>
+      <DivApp>
       
       <Header></Header>
+      <Routes>  
+          
+          <Route path='/' element={<Formulario />}/>
       
-    {/*  <Main>
-        <Index />
-      </Main> */}
-       <Formulario /> 
+      </Routes>
+      <Footer></Footer>
+      </DivApp>
 
-       <Footer></Footer>
-    </DivApp>
+      </Router>
+   
   );
 }
 export default App;
