@@ -81,6 +81,7 @@ function App() {
       setPassword({ campo: "", valido: null })
       setPassword2({ campo: "", valido: null })
       setEmail({ campo: "", valido: null })
+      setDescripcion({ campo: "", valido: null })
       setNombreEmprendimiento({ campo: "", valido: null })
       setPais({ campo: "", valido: null })
     }   
@@ -230,17 +231,8 @@ function App() {
         <ContenedorBtnEnvio>
           <Boton type="submit">Enviar</Boton>
        {formValido===true &&  
-       (<MensajeExito>
-        <FontAwesomeIcon icon={faExclamationTriangle} />
-        <p>
-          <b>Yey!!</b> El formulario se envió exitosamente! 😉
-        </p>
-      {/*   <MensajeExito>El Formulario se envio exitosamente!</MensajeExito> */}
-      </MensajeExito>
-      
-      )
-        
        
+         <MensajeExito>El Formulario se envio exitosamente!</MensajeExito>        
        
        }
         </ContenedorBtnEnvio>

@@ -9,17 +9,13 @@ const colores = {
 };
 
 const Form = styled.form`
-  display: flex;
-  width: 100vw;
-  flex-wrap: wrap;
-  justify-content:center;
-  div{
-    width: 45vw;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 100px;
   @media (max-width: 800px) {
-    flex-direction: column;
-    div{
-      width:100vw;}
+    display:grid;
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -135,18 +131,20 @@ const Boton = styled.button`
   }
 `;
 
-const MensajeExito = styled.div`
+const MensajeExito = styled.p`
   font-size: 14px;
-  color: white;
+  color: ${colores.exito};
+  display: none;
+`;
 
-
+const MensajeError = styled.div`
   display: flex;
   width: 60%;
   height: 50px;
-  background-color: ${colores.exito};
+  background-color: ${colores.error};
   padding: 15px 15px 0 15px;
   border-radius: 5px;
-  
+  grid-column: span 2;
   p {
     margin: 0;
     text-align: center;
@@ -154,31 +152,6 @@ const MensajeExito = styled.div`
   b {
     margin-left: 40px;
   }
- 
-`;
-
-const MensajeError = styled.div`
-  display: flex;
-  justify-content:center;
-  width: 100vw;
-  height: 4rem;  
-  
-  div{
-    width: 80%;
-    background-color: ${colores.error};
-    height:100%;
-    border-radius: 5px;
-
-    p {
-      margin: 0;
-      text-align: center;
-    }
-    b {
-      margin-left: 40px;
-    }
-  }
-    
- 
 `;
 
 export {
