@@ -14,6 +14,7 @@ const Form = styled.form`
   gap: 20px;
   margin: 100px;
   @media (max-width: 800px) {
+    display:grid;
     grid-template-columns: 1fr;
   }
 `;
