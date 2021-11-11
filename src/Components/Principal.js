@@ -1,7 +1,7 @@
 import React from "react";
-import { Nav, DivContainer, DivQueEs } from "../Elements/StyleIndex";
+import { Nav, DivContainer, DivQueEs } from "../Elements/StylesPrincipal";
 
-const Index = () => {
+const Principal = () => {
   return (
     <div>
       <Nav>
@@ -19,4 +19,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Principal;

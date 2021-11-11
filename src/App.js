@@ -1,13 +1,15 @@
 import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+
 import { Main, DivApp } from "./Elements/StylesApp";
 import Formulario from "./Components/Form";
-import Index from "./Components/Index";
+import Principal from "./Components/Principal";
 
 function App() {
   return (
     <DivApp>
       <Main>
-        <Index />
+        <Principal />
       </Main>
       <Formulario />
     </DivApp>
