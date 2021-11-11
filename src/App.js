@@ -9,9 +9,9 @@ function App() {
   return (
     <DivApp>
       <Header></Header>
-
+      <Principal />
       {/*  <Main>
-        <Index />
+        
       </Main>
       <Formulario /> */}
 
