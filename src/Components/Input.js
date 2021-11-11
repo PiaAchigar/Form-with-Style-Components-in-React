@@ -20,6 +20,7 @@ const ComponenteInput = ({
   placeholder,
   leyendaError,
   expresionRegular,
+  funcion,
 }) => {
   const [user, setUser] = useState({
     nombre: "",
@@ -27,13 +28,13 @@ const ComponenteInput = ({
     nameEmprendimiento: "",
     email: "",
     pais: "",
+    password: "",
     description: "",
     telefono: null,
     files: "",
   });
 
   const handleChange = (e) => {
-    console.log(e.target.value);
     setEstado({ ...estado, campo: e.target.value });
     // setUser({
     //   ...user,
@@ -47,6 +48,9 @@ const ComponenteInput = ({
       } else {
         setEstado({ ...estado, valido: "false" });
       }
+    }
+    if (funcion) {
+      funcion();
     }
   };
 

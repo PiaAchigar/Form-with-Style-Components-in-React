@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const colores = {
   borde: "#0075FF",
   error: "#f66060",

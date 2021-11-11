@@ -37,6 +37,19 @@ function App() {
     telefono: /^\d{7,14}$/, // 7 a 14 numeros.
   };
 
+  const validarPasword2 = () => {
+    if (password.campo.length > 0) {
+      if (password.campo !== password2.campo) {
+        setPassword2((prevState) => {
+          return { ...prevState, valido: "false" };
+        });
+      } else {
+        setPassword2((prevState) => {
+          return { ...prevState, valido: "true" };
+        });
+      }
+    }
+  };
   return (
     <main>
       <Form action="">
@@ -98,7 +111,7 @@ function App() {
           name="password2"
           placeholder="Escribe nuevamente su password..."
           leyendaError="Ambas contraseñas deben ser iguales"
-          function={validarPasword2}
+          funcion={validarPasword2}
         />
         <Input
           estado={descripcion}
