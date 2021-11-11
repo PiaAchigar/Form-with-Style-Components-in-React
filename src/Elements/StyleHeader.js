@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 const Header = styled.header`
     height: 7rem;
-    width:100vw;
+    mawx-width:100vw;
     display:flex;
     align-items: center;
     img{
-      width: 20%;
+      width: 15%;
       position:relative;
-      left: 3rem;      
+      left: 8%;      
     }
     @media (max-width:800px){
       img{

@@ -9,14 +9,15 @@ import Index from "./Components/Index";
 function App() {
   return (
     <DivApp>
+      
       <Header></Header>
       
-     {/*  <Main>
+    {/*  <Main>
         <Index />
-      </Main>
-      <Formulario /> */}
+      </Main> */}
+       <Formulario /> 
 
-      <Footer></Footer>
+       <Footer></Footer>
     </DivApp>
   );
 }

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 const DivApp = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap');
+  font-family: 'Raleway', sans-serif;
 `;
 const Main = styled.main`
-  font-family: "Raleway", sans-serif;
+
+
   display: flex;
   justify-content: center;
 
