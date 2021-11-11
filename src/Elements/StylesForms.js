@@ -6,6 +6,7 @@ const colores = {
   error: "#f66060",
   exito: "#1ed12d",
   hover: "#196C84",
+  fondo: '#196C84'
 };
 
 const FormLabel = styled.form`
@@ -168,4 +169,5 @@ export {
   Boton,
   MensajeExito,
   MensajeError,
+  colores
 };
