@@ -8,14 +8,26 @@ const colores = {
   hover: "#196C84",
 };
 
-const Form = styled.form`
+const Main = styled.main`
+  box-shadow: 5px 0px 30px grey;
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+`;
+
+const FormLabel = styled.form`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin: 100px;
   @media (max-width: 800px) {
-    display:grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 100%;
   }
 `;
 
@@ -155,7 +167,8 @@ const MensajeError = styled.div`
 `;
 
 export {
-  Form,
+  Main,
+  FormLabel,
   Label,
   GrupoInput,
   Input,
