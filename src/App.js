@@ -1,12 +1,16 @@
 import React from "react";
-import { Main } from "./Elements/StylesForms";
+import { Main, DivApp } from "./Elements/StylesApp";
 import Formulario from "./Components/Form";
+import Index from "./Components/Index";
 
 function App() {
   return (
-    <Main>
+    <DivApp>
+      <Main>
+        <Index />
+      </Main>
       <Formulario />
-    </Main>
+    </DivApp>
   );
 }
 export default App;
