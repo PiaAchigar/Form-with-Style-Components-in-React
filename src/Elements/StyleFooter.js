@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {colores} from './StylesForms'
+import {colores} from './StylesApp'
 
 const Footer = styled.footer`
     height: 6rem;

@@ -7,11 +7,9 @@ const FormBody = styled.section`
 display:flex;
 flex-direction:column;
 margin-top:7rem;
-
 `
 
 const Entradas = styled.div`
-
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 1rem;
@@ -253,6 +251,5 @@ export {
   MensajeError,
   FormTitle,
   FormBody,
-  colores,
   Entradas
 };
