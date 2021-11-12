@@ -1,15 +1,7 @@
 import styled, { css } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {colores} from './StylesApp'
 
-const colores = {
-  borde: "#0075FF",
-  error: "#F64B3C",
-  exito: "#0CCA6F",
-  hover: "#196C84",
-  lightblue: '#196C84',
-  orange: '#F2966B',
-  darkblue:'#224E68'
-};
 
 const FormBody = styled.section`
 display:flex;
@@ -80,7 +72,7 @@ const GrupoInput = styled.div`
   position: relative;
   z-index: 2;
   display:flex;
-  flex-direction-column;
+  flex-direction:column;
 `;
 
 const Input = styled.input`
