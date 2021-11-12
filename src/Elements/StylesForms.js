@@ -1,15 +1,6 @@
 import styled, { css } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const colores = {
-  borde: "#0075FF",
-  error: "#F64B3C",
-  exito: "#0CCA6F",
-  hover: "#196C84",
-  lightblue: "#196C84",
-  orange: "#F2966B",
-  darkblue: "#224E68",
-};
+import { colores } from "./StylesApp";
 
 const FormBody = styled.section`
   display: flex;
@@ -259,6 +250,5 @@ export {
   MensajeError,
   FormTitle,
   FormBody,
-  colores,
   Entradas,
 };

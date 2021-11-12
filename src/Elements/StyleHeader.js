@@ -8,12 +8,12 @@ const Header = styled.header`
     position:absolute;
     z-index:1;
     top:0;
-    
+    a{ position:relative;
+      left: 8%; 
     img{
-      width: 15%;
-      position:relative;
-      left: 8%;      
-    }
+      width: 70%;
+          
+    }}
     @media (max-width:800px){
       img{
         width:35%

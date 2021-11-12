@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import {colores} from './StylesForms'
+import {colores} from './StylesApp'
 import imgFondo from '../Assets/images/bg-index.png'
+
+
 const Banner = styled.section`
  max-width: 100vw;
     div{
