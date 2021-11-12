@@ -9,6 +9,7 @@ import {
   P,
   SecComienza,
   DivBtn,
+  Img,
 } from "../Elements/StylesPrincipal";
 import { Link } from "react-router-dom";
 import imgFondo from "../Assets/images/bg-index.jpg";

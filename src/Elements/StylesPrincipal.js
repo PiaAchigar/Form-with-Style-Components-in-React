@@ -81,6 +81,12 @@ const DivBtn = styled.div`
   display: flex;
 `;
 
+const Img = styled.img`
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+`;
+
 export {
   SecQueEs,
   Section,
@@ -91,4 +97,5 @@ export {
   P,
   SecComienza,
   DivBtn,
+  Img,
 };
