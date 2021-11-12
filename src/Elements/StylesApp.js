@@ -3,6 +3,8 @@ import styled from "styled-components";
 const DivApp = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap');
   font-family: 'Raleway', sans-serif;
+  margin:0;
+  padding:0;
 `;
 const Main = styled.main`
 

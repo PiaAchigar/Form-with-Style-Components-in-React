@@ -2,9 +2,13 @@ import styled from "styled-components";
 
 const Header = styled.header`
     height: 7rem;
-    mawx-width:100vw;
+    width:99%;
     display:flex;
     align-items: center;
+    position:absolute;
+    z-index:1;
+    top:0;
+    
     img{
       width: 15%;
       position:relative;
@@ -16,5 +20,6 @@ const Header = styled.header`
       }
     }
 `;
+
 
 export {Header};

@@ -1,21 +1,28 @@
 import React from "react";
-import { Nav, DivContainer, DivQueEs } from "../Elements/StyleIndex";
+import { Banner, Content, DivQueEs } from "../Elements/StyleIndex";
+import {Link} from 'react-router-dom'
+import imgFondo from '../Assets/images/bg-index.png'
 
 const Index = () => {
   return (
-    <div>
-      <Nav>
-        <p>¡Te damos la Bienvenida al HOLD_UP!</p>
-      </Nav>
-      <DivContainer>
-        <DivQueEs>
-          <p>¿Que es Hold_up?</p>
-        </DivQueEs>
-        <div>Comienza ahora</div>
-      </DivContainer>
+    
+    <section>
+     <Banner>
+       <div>
+          <img src={imgFondo}></img>
+       </div>
+      <Content>
+        <h1> ¡Participa en<br/> el hold-up!</h1>
+        <p>
+        Explora la plataforma y ayuda a emprendedorxs a resolver retos de su proyecto a través de la inteligencia colectiva
+        </p>
+      </Content> 
+      
+     </Banner>
 
-      <footer>redes</footer>
-    </div>
+     <Link to="/form"> ir al form</Link>
+     </section>
+    
   );
 };
 

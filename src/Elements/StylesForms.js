@@ -7,12 +7,14 @@ const colores = {
   exito: "#0CCA6F",
   hover: "#196C84",
   lightblue: '#196C84',
-  orange: '#F2966B'
+  orange: '#F2966B',
+  darkblue:'#224E68'
 };
 
 const FormBody = styled.section`
 display:flex;
 flex-direction:column;
+margin-top:7rem;
 
 `
 

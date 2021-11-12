@@ -20,9 +20,9 @@ function App() {
       
       <Header></Header>
       <Routes>  
-          
-          <Route path='/' element={<Formulario />}/>
-      
+          <Route path='/' element={<Index />}/>
+          <Route path='/form' element={<Formulario />}/>
+
       </Routes>
       <Footer></Footer>
       </DivApp>
