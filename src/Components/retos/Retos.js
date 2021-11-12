@@ -16,21 +16,23 @@ const RetosComponent = () => {
     },[])
 
     const [post, setPost] = useState()
-
-    
-    const getPosts = () =>{
+    const [user , setUser] = useState()
+     
+    const getPosts =  async () =>{
         
-        axios.get("https://my-json-server.typicode.com/danacunam/json/posts")
-            .then((res)=>setPost(res.data))
-            .catch((err)=>console.log(err))       
-        }
+        await axios.get("https://my-json-server.typicode.com/danacunam/json/posts")
+            .then(res=>setPost(res.data))                    
+            .catch(err=>console.log(err))  
+           
+        await axios.get("https://my-json-server.typicode.com/danacunam/json/users")
+            .then(res=>setUser(res.data))                    
+            .catch(err=>console.log(err))  
+
+            
+                
+            }
         
-  
-
-
-
-
-
+        
     return (
     <>
         <Botonera>
@@ -47,17 +49,19 @@ const RetosComponent = () => {
 
          <Vista > 
             <ProfilePreview>
-                <ProfilePreviewComponent />
+            {  
+            !user ? console.log('cargando') :  user.map((user)=>{
+                return  <ProfilePreviewComponent nombre={user.nombre} apellido={user.apellido} profilePic={user.profilePic} proyecto={user.proyecto}/>}
+                )
+                
+                
+                }    
             </ProfilePreview>
             
             <ForoView>
-                <ForoRetosComponent />
-               
-                { !post ? console.log('Cargando...') : post.map((post)=>{
-                 return <Feed url={post.id} titulo={post.nombre} desc={post.descripcion} posted={post.posted} img={post.logo}></Feed>
-                 })
-                 } 
-               
+                <ForoRetosComponent  />
+              { !post ? console.log('cargando') :  post.map((post)=>{
+                return <Feed key={post.nombre} url={post.id} titulo={post.nombre} desc={post.descripcion} posted={post.posted} img={post.logo}></Feed>})}                              
             </ForoView>
          
          

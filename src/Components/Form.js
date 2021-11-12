@@ -226,7 +226,8 @@ function Formulario() {
 
 
         { formValido===false && (
-          <MensajeError>
+         
+         <MensajeError>
            
             <img src={errorImg} />
               <div>              
