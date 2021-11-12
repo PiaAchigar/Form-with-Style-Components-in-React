@@ -82,9 +82,15 @@ const DivBtn = styled.div`
 `;
 
 const Img = styled.img`
+  position: absolute;
+  left: 17em;
   transition: all 500ms ease-out;
   opacity: 0;
   visibility: hidden;
+  &:hover {
+    opacity: 0;
+    visibility: hidden;
+  }
 `;
 
 export {

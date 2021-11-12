@@ -53,6 +53,7 @@ const Principal = () => {
         <DivBtn>
           <Link to="/retos">
             <img src={imgEmprededor}></img>
+            <Img src={imgEmprendedorDesc}></Img>
           </Link>
           <Link to="/form">
             <img src={imgCiudadano}></img>
