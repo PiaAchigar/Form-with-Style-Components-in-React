@@ -1,11 +1,26 @@
 import React from "react";
-import { Banner, Content, DivQueEs } from "../Elements/StylesPrincipal";
+import {
+  Section,
+  Banner,
+  Content,
+  SecCont,
+  SecQueEs,
+  Ptitle,
+  P,
+  SecComienza,
+  DivBtn,
+} from "../Elements/StylesPrincipal";
 import { Link } from "react-router-dom";
 import imgFondo from "../Assets/images/bg-index.png";
+import imgFrame from "../Assets/images/Frame.png";
+import imgCiudadano from "../Assets/images/ciudadano.png";
+import imgCiudadanoDesc from "../Assets/images/ciudadanoDescription.png";
+import imgEmprededor from "../Assets/images/emprendedor.png";
+import imgEmprendedorDesc from "../Assets/images/emprenderorDescription.png";
 
 const Principal = () => {
   return (
-    <section>
+    <Section>
       <Banner>
         <div>
           <img src={imgFondo}></img>
@@ -22,36 +37,31 @@ const Principal = () => {
           </p>
         </Content>
       </Banner>
-      <div>
-        <div>
-          <p>¿Qué es el HOLD_UP?</p>
-          <p>
+      <SecCont>
+        <SecQueEs>
+          <Ptitle>¿Qué es el hold_up?</Ptitle>
+          <P>
             Plataforma de co-creación entre emprendedores socioambientales y
             ciudadanos para dar solución a un reto específico de un proyecto.
-          </p>
-        </div>
-        <img></img>
-      </div>
-      <div>
-        <div>
+          </P>
+        </SecQueEs>
+        <img src={imgFrame}></img>
+      </SecCont>
+      <SecComienza>
+        <Ptitle>Comienza ahora</Ptitle>
+        <DivBtn>
           <Link to="/form">
-            {" "}
-            <p>Quiero participar como</p>
+            <img src={imgCiudadano}></img>
           </Link>
-
-          <p>emprendedor/a</p>
-        </div>
-        <div>
-          <div>
-            <p>Quiero participar como</p>
-            <p>ciudadano/a</p>
-          </div>
-        </div>
-        <p>
+          <Link to="/retos">
+            <img src={imgEmprededor}></img>
+          </Link>
+        </DivBtn>
+        <P>
           Ya tengo <span>cuenta</span>
-        </p>
-      </div>
-    </section>
+        </P>
+      </SecComienza>
+    </Section>
   );
 };
 
