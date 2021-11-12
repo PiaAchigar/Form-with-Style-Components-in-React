@@ -1,48 +1,107 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { colores } from "./StylesApp";
 
-const colores = {
-  fondo: "#C1E94E",
-  btn: "#9B084F",
-  letras: "#196C84",
-};
-
-const Nav = styled.nav`
-  color: ${colores.letras};
-  text-align: center;
-  background-color: ${colores.fondo};
-  height: 86px;
-  max-width: 769px;
-  left: -368px;
-  top: -256px;
-  border-radius: 0px;
+const Section = styled.section`
+  @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap");
   display: flex;
-  align-items: center;
-  justify-content: center;
-  &:hover {
-    background-color: red;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif; ;
+`;
+
+const Banner = styled.section`
+  max-width: 100vw;
+  div {
+    width: 100%;
+    img {
+      width: 100%;
+      opacity: 0.4;
+    }
   }
 `;
 
-const DivContainer = styled.div`
+const Content = styled.section`
+  position: absolute;
+  top: 17%;
+  left: 6vw;
+  width: 50vw;
+  color: ${colores.darkblue};
+  h1 {
+    font-weight: 800;
+    font-size: 5rem;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+`;
+const SecCont = styled.section`
+  display: flex;
+  justify-content: space-around;
+  max-width: 80em;
+  margin: 4em 2em;
+  img {
+    /* position: absolute; */
+    padding-top: 5em;
+    width: 15em;
+    height: 20em;
+  }
+`;
+
+const SecQueEs = styled.section`
+  display: flex;
+  flex-direction: column;
+  max-width: 50em;
+  padding: 0.5em 0.5em 0.5em 1em;
+`;
+
+const Ptitle = styled.p`
+  font-weight: 800;
+  font-size: 300%;
+  color: ${colores.darkblue};
+`;
+const P = styled.p`
+  font-weight: 600;
+  font-size: 200%;
+  margin-right: 5em;
+  color: ${colores.darkblue};
+  span {
+    color: ${colores.orange};
+  }
+`;
+
+const SecComienza = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 769px;
+  margin: 3em 2em;
 `;
 
-const DivQueEs = styled.div`
-  background-color: ${colores.fondo};
-  height: 90px;
-  width: 458px;
-  left: -203px;
-  top: -109px;
-  border-radius: 100px;
+const DivBtn = styled.div`
   display: flex;
-  justify-content: center;
-  p {
-    text-align: center;
-    color: ${colores.letras};
+`;
+
+const Img = styled.img`
+  position: absolute;
+  left: 17em;
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  &:hover {
+    opacity: 0;
+    visibility: hidden;
   }
 `;
 
-export { Nav, DivContainer, DivQueEs };
+export {
+  SecQueEs,
+  Section,
+  Banner,
+  Content,
+  SecCont,
+  Ptitle,
+  P,
+  SecComienza,
+  DivBtn,
+  Img,
+};
