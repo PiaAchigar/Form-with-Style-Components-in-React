@@ -1,4 +1,6 @@
 import React from "react";
+import { Router, Routes, Route, Link } from "react-router-dom";
+
 import { Main, DivApp } from "./Elements/StylesApp";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -7,16 +9,23 @@ import Principal from "./Components/Principal";
 
 function App() {
   return (
-    <DivApp>
-      <Header></Header>
-      <Principal />
-      {/*  <Main>
-        
-      </Main>
-      <Formulario /> */}
+    <Router>
+      <DivApp>
+        <Header />
+        <Main>
+          <Routes>
+            <Route path="/">
+              <Principal />
+            </Route>
+            <Route path="/registro">
+              <Formulario />
+            </Route>
+          </Routes>
+        </Main>
 
-      <Footer></Footer>
-    </DivApp>
+        <Footer></Footer>
+      </DivApp>
+    </Router>
   );
 }
 export default App;
