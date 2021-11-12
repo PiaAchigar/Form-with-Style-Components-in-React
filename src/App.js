@@ -23,10 +23,12 @@ function App() {
       
       <Header></Header>
       <Routes>  
-          <Route path='/' element={<Index />}/>
-          <Route path='/form' element={<Formulario />}/>
+          
+         
           <Route path='/retos' element={<Retos />} />
-
+          <Route path='/form' element={<Formulario />}/>
+          <Route path='/' element={<Index />}/>
+          
       </Routes>
       <Footer></Footer>
       </DivApp>
