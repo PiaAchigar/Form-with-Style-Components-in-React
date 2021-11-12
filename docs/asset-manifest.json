@@ -1,17 +1,22 @@
 {
   "files": {
-    "main.js": "/static/js/main.2cd8f23f.chunk.js",
-    "main.js.map": "/static/js/main.2cd8f23f.chunk.js.map",
+    "main.js": "/static/js/main.85433a0f.chunk.js",
+    "main.js.map": "/static/js/main.85433a0f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.33018c59.js",
     "runtime-main.js.map": "/static/js/runtime-main.33018c59.js.map",
-    "static/js/2.f7825778.chunk.js": "/static/js/2.f7825778.chunk.js",
-    "static/js/2.f7825778.chunk.js.map": "/static/js/2.f7825778.chunk.js.map",
+    "static/js/2.a2747237.chunk.js": "/static/js/2.a2747237.chunk.js",
+    "static/js/2.a2747237.chunk.js.map": "/static/js/2.a2747237.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.f7825778.chunk.js.LICENSE.txt": "/static/js/2.f7825778.chunk.js.LICENSE.txt"
+    "static/js/2.a2747237.chunk.js.LICENSE.txt": "/static/js/2.a2747237.chunk.js.LICENSE.txt",
+    "static/media/bg-index.6b911b47.jpg": "/static/media/bg-index.6b911b47.jpg",
+    "static/media/ciudadano.0a3713c2.png": "/static/media/ciudadano.0a3713c2.png",
+    "static/media/ciudadanoDescription.67aa5c22.png": "/static/media/ciudadanoDescription.67aa5c22.png",
+    "static/media/emprendedor.add94c5e.png": "/static/media/emprendedor.add94c5e.png",
+    "static/media/emprenderorDescription.48704441.png": "/static/media/emprenderorDescription.48704441.png"
   },
   "entrypoints": [
     "static/js/runtime-main.33018c59.js",
-    "static/js/2.f7825778.chunk.js",
-    "static/js/main.2cd8f23f.chunk.js"
+    "static/js/2.a2747237.chunk.js",
+    "static/js/main.85433a0f.chunk.js"
   ]
 }
