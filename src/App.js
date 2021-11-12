@@ -1,9 +1,11 @@
 import React from "react";
+
+
 import { Main, DivApp } from "./Elements/StylesApp";
-import Header from "./Components/Header"
-import Footer  from "./Components/Footer";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import Formulario from "./Components/Form";
-import Index from "./Components/Index";
+import Index from "./Components/Principal";
  
 import {
   BrowserRouter as Router,
@@ -27,7 +29,7 @@ function App() {
       <Footer></Footer>
       </DivApp>
 
-      </Router>
+    </Router>
    
   );
 }

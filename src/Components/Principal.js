@@ -1,9 +1,9 @@
 import React from "react";
-import { Banner, Content, DivQueEs } from "../Elements/StyleIndex";
+import { Banner, Content, DivQueEs } from "../Elements/StylesPrincipal";
 import {Link} from 'react-router-dom'
 import imgFondo from '../Assets/images/bg-index.png'
 
-const Index = () => {
+const Principal = () => {
   return (
     
     <section>
@@ -26,4 +26,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Principal;
