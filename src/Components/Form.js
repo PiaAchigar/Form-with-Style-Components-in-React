@@ -11,8 +11,6 @@ import {
   FormBody,
   Entradas
 } from "../Elements/StylesForms";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 
 import Input from "./Input"
 

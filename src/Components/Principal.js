@@ -21,6 +21,7 @@ const Principal = () => {
      </Banner>
 
      <Link to="/form"> ir al form</Link>
+     <Link to="/retos"> ir al Retis</Link>
      </section>
     
   );

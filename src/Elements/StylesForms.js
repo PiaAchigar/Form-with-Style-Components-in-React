@@ -250,5 +250,9 @@ export {
   MensajeError,
   FormTitle,
   FormBody,
+<<<<<<< HEAD
   Entradas,
+=======
+  Entradas
+>>>>>>> 58436809b8f1c7680be099c9c51f846a703b27d7
 };
