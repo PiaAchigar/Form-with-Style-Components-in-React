@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Section,
   Banner,
@@ -9,7 +9,8 @@ import {
   P,
   SecComienza,
   DivBtn,
-  Img,
+  ImgEmprendedor,
+  ImgCiudadano,
 } from "../Elements/StylesPrincipal";
 import { Link } from "react-router-dom";
 import imgFondo from "../Assets/images/bg-index.jpg";
@@ -20,6 +21,21 @@ import imgEmprededor from "../Assets/images/emprendedor.png";
 import imgEmprendedorDesc from "../Assets/images/emprenderorDescription.png";
 
 const Principal = () => {
+  const [img, setImg] = useState(false);
+  const [imgC, setimgC] = useState(false);
+  const ImgHover = () => {
+    setImg(true);
+  };
+  const ImgOut = () => {
+    setImg(false);
+  };
+  const ImgHoverC = () => {
+    setimgC(true);
+  };
+  const ImgOutC = () => {
+    setimgC(false);
+  };
+
   return (
     <Section>
       <Banner>
@@ -52,12 +68,29 @@ const Principal = () => {
         <Ptitle>Comienza ahora</Ptitle>
         <DivBtn>
           <Link to="/retos">
-            <img src={imgEmprededor}></img>
-            <Img src={imgEmprendedorDesc}></Img>
+            <img
+              src={imgEmprededor}
+              onMouseOver={ImgHover}
+              onMouseOut={ImgOut}
+            ></img>
           </Link>
+          {img === true && (
+            <ImgEmprendedor>
+              <img src={imgEmprendedorDesc}></img>
+            </ImgEmprendedor>
+          )}
           <Link to="/form">
-            <img src={imgCiudadano}></img>
+            <img
+              src={imgCiudadano}
+              onMouseOver={ImgHoverC}
+              onMouseOut={ImgOutC}
+            ></img>
           </Link>
+          {imgC === true && (
+            <ImgCiudadano>
+              <img src={imgCiudadanoDesc}></img>
+            </ImgCiudadano>
+          )}
         </DivBtn>
         <P>
           Ya tengo <span>cuenta</span>

@@ -27,11 +27,11 @@ const Content = styled.section`
   color: ${colores.darkblue};
   h1 {
     font-weight: 800;
-    font-size: 5rem;
+    font-size: 500%;
     margin-bottom: 0;
   }
   p {
-    font-size: 2rem;
+    font-size: 200%;
     font-weight: 600;
   }
 `;
@@ -79,18 +79,16 @@ const SecComienza = styled.section`
 
 const DivBtn = styled.div`
   display: flex;
+  margin-top: 1rem;
 `;
 
-const Img = styled.img`
+const ImgEmprendedor = styled.div`
   position: absolute;
-  left: 17em;
-  transition: all 500ms ease-out;
-  opacity: 0;
-  visibility: hidden;
-  &:hover {
-    opacity: 0;
-    visibility: hidden;
-  }
+  left: 0.5 em;
+`;
+const ImgCiudadano = styled.div`
+  position: absolute;
+  right: 7.4em;
 `;
 
 export {
@@ -103,5 +101,6 @@ export {
   P,
   SecComienza,
   DivBtn,
-  Img,
+  ImgEmprendedor,
+  ImgCiudadano,
 };
