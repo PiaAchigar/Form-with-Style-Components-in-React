@@ -5,6 +5,9 @@ const DivApp = styled.div`
   font-family: 'Raleway', sans-serif;
   margin:0;
   padding:0;
+  a{
+    text-decoration:none;    
+  }
 `;
 const Main = styled.main`
 
@@ -26,7 +29,8 @@ const colores = {
   hover: "#196C84",
   lightblue: '#196C84',
   orange: '#F2966B',
-  darkblue:'#224E68'
+  darkblue:'#224E68',
+  cardblue:'#F4FBFF'
 };
 
 export { Main, DivApp, colores };

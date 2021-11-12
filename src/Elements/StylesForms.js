@@ -250,5 +250,5 @@ export {
   MensajeError,
   FormTitle,
   FormBody,
-  Entradas,
+  Entradas
 };
