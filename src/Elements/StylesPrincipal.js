@@ -64,12 +64,16 @@ const P = styled.p`
   font-size: 200%;
   margin-right: 5em;
   color: ${colores.darkblue};
+  span {
+    color: ${colores.orange};
+  }
 `;
 
 const SecComienza = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 3em 2em;
 `;
 
 const DivBtn = styled.div`

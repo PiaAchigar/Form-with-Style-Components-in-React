@@ -50,11 +50,11 @@ const Principal = () => {
       <SecComienza>
         <Ptitle>Comienza ahora</Ptitle>
         <DivBtn>
-          <Link to="/form">
-            <img src={imgCiudadano}></img>
-          </Link>
           <Link to="/retos">
             <img src={imgEmprededor}></img>
+          </Link>
+          <Link to="/form">
+            <img src={imgCiudadano}></img>
           </Link>
         </DivBtn>
         <P>
