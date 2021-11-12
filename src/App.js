@@ -1,11 +1,12 @@
 import React from "react";
 
 
-import { Main, DivApp } from "./Elements/StylesApp";
+import {DivApp } from "./Elements/StylesApp";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Formulario from "./Components/Form";
 import Index from "./Components/Principal";
+import Retos from './Components/retos/Retos'
  
 import {
   BrowserRouter as Router,
@@ -24,6 +25,7 @@ function App() {
       <Routes>  
           <Route path='/' element={<Index />}/>
           <Route path='/form' element={<Formulario />}/>
+          <Route path='/retos' element={<Retos />} />
 
       </Routes>
       <Footer></Footer>
