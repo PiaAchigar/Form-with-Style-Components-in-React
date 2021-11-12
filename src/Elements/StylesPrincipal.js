@@ -14,6 +14,7 @@ const Banner = styled.section`
     width: 100%;
     img {
       width: 100%;
+      opacity: 0.4;
     }
   }
 `;

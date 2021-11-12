@@ -11,7 +11,7 @@ import {
   DivBtn,
 } from "../Elements/StylesPrincipal";
 import { Link } from "react-router-dom";
-import imgFondo from "../Assets/images/bg-index.png";
+import imgFondo from "../Assets/images/bg-index.jpg";
 import imgFrame from "../Assets/images/Frame.png";
 import imgCiudadano from "../Assets/images/ciudadano.png";
 import imgCiudadanoDesc from "../Assets/images/ciudadanoDescription.png";
