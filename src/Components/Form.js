@@ -7,13 +7,19 @@ import {
   Boton,
   MensajeExito,
   MensajeError,
+  FormTitle,
+  FormBody,
+  Entradas
 } from "../Elements/StylesForms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 
-import Input from "./Input";
+import Input from "./Input"
 
 import Axios from "axios";
+
+import errorImg from '../Assets/images/error.png'
+import exitoImg from '../Assets/images/exito.png'
 
 function Formulario() {
   //coloco el estado de validación de cada campo, para poder despues validar todo el formulario de una.
@@ -50,6 +56,7 @@ function Formulario() {
     ) {
       sendData();
     } else {
+      
       setFormValido(false);
     }
   };
@@ -112,129 +119,152 @@ function Formulario() {
     }
   };
   return (
-    <main>
-      <FormLabel action="" onSubmit={onSubmit}>
-        <Input
-          estado={nombre}
-          setEstado={setNombre}
-          label="Nombre del Emprendedor"
-          type="text"
-          name="nombre"
-          placeholder="Su nombre..."
-          leyendaError="Debe de colocar letras mayusculas y/o minusculas de 4 a 16 caracteres 😜"
-          expresionRegular={expresiones.nombre}
-        />
-        <Input
-          estado={email}
-          setEstado={setEmail}
-          label="Email"
-          type="email"
-          name="email"
-          placeholder="correo@correo.com"
-          leyendaError="Debe de colocar letras mayusculas y/o minusculas de 4 a 16 caracteres 😜"
-          expresionRegular={expresiones.correo}
-        />
-        <Input
-          estado={apellido}
-          setEstado={setApellido}
-          label="Apellido"
-          type="text"
-          name="apellido"
-          placeholder="Apellido..."
-          leyendaError="Debe de colocar letras mayusculas y/o minusculas de 4 a 16 caracteres 😜"
-          expresionRegular={expresiones.nombre}
-        />
-        <Input
-          estado={password}
-          setEstado={setPassword}
-          label="Contraseña"
-          type="password"
-          name="password"
-          placeholder="Escribe tu password..."
-          leyendaError="Entre 4 y 10 digitos esta bien 😜"
-          expresionRegular={expresiones.password}
-        />
-        <Input
-          estado={nombreEmprendimiento}
-          setEstado={setNombreEmprendimiento}
-          label="Nombre de su Emprendimiento..."
-          type="text"
-          name="nombreEmprendimiento"
-          placeholder="Escriba aquí el nombre del emprendimiento..."
-          leyendaError="Entre 4 y 10 digitos esta bien 😜"
-          expresionRegular={expresiones.nombre}
-        />
-        <Input
-          estado={password2}
-          setEstado={setPassword2}
-          label="Repetir Contraseña"
-          type="password"
-          name="password2"
-          placeholder="Escribe nuevamente su password..."
-          leyendaError="Ambas contraseñas deben ser iguales"
-          funcion={validarPasword2}
-        />
-        <Input
-          estado={descripcion}
-          setEstado={setDescripcion}
-          label="Descripción de su Emprendimiento"
-          type="text"
-          name="descripcion"
-          placeholder="Contanos sobre tu emprendimiento..."
-          leyendaError="Necesitamos que nos cuentes sobre tu emprendimeito "
-          expresionRegular={expresiones.description}
-        />
-        <Input
-          estado={pais}
-          setEstado={setPais}
-          label="País de residencia"
-          type="text"
-          name="pais"
-          placeholder="Escriba su país de residencia"
-          leyendaError="Entre 4 y 10 digitos esta bien 😜"
-          expresionRegular={expresiones.nombre}
-        />
-        <Input
-          estado={telefono}
-          setEstado={setTelefono}
-          label="Telefono"
-          type="number"
-          name="telefono"
-          placeholder="Escribe tu telefono - no es obligatorio..."
-          leyendaError="😜"
-          expresionRegular=""
-        />
-
+    <FormBody>
+      <FormTitle>
+        <h1>Registro de <span>emprendedor</span></h1>
+        </FormTitle>
+      <FormLabel onSubmit={onSubmit}>
+        <Entradas>
+            <Input
+              estado={nombre}
+              setEstado={setNombre}
+              label="Nombre"
+              type="text"
+              name="nombre"
+              placeholder="Su nombre..."
+              leyendaError="Debe de colocar letras mayusculas y/o minusculas de 4 a 16 caracteres 😜"
+              expresionRegular={expresiones.nombre}
+            />
+              <Input
+              estado={apellido}
+              setEstado={setApellido}
+              label="Apellido"
+              type="text"
+              name="apellido"
+              placeholder="Apellido..."
+              leyendaError="Debe de colocar letras mayusculas y/o minusculas de 4 a 16 caracteres 😜"
+              expresionRegular={expresiones.nombre}
+            />
+                <Input
+              estado={telefono}
+              setEstado={setTelefono}
+              label="Teléfono"
+              type="number"
+              name="telefono"
+              placeholder="Escribe tu telefono - no es obligatorio..."
+              leyendaError="😜"
+              expresionRegular=""
+            />
+            <Input
+              estado={email}
+              setEstado={setEmail}
+              label="Email"
+              type="email"
+              name="email"
+              placeholder="correo@correo.com"
+              leyendaError="Debe de colocar letras mayusculas y/o minusculas de 4 a 16 caracteres 😜"
+              expresionRegular={expresiones.correo}
+            />
+        
+            <Input
+              estado={password}
+              setEstado={setPassword}
+              label="Contraseña"
+              type="password"
+              name="password"
+              placeholder="Escribe el password..."
+              leyendaError="Entre 4 y 10 digitos esta bien 😜"
+              expresionRegular={expresiones.password}
+            />
+                <Input
+              estado={password2}
+              setEstado={setPassword2}
+              label="Repetir Contraseña"
+              type="password"
+              name="password2"
+              placeholder="Escribe nuevamente el password..."
+              leyendaError="Ambas contraseñas deben ser iguales"
+              funcion={validarPasword2}
+            />
+            <Input
+              estado={nombreEmprendimiento}
+              setEstado={setNombreEmprendimiento}
+              label="Nombre del Emprendimiento"
+              type="text"
+              name="nombreEmprendimiento"
+              placeholder="Escribe aquí el nombre tu emprendimiento..."
+              leyendaError="Entre 4 y 10 digitos esta bien 😜"
+              expresionRegular={expresiones.nombre}
+            />
+        
+            <Input
+              estado={descripcion}
+              setEstado={setDescripcion}
+              label="Descripción del Emprendimiento"
+              type="text"
+              name="descripcion"
+              placeholder="Cuéntanos sobre tu emprendimiento..."
+              leyendaError="Necesitamos que nos cuentes sobre tu emprendimeito "
+              expresionRegular={expresiones.description}
+            />
+            <Input
+              estado={pais}
+              setEstado={setPais}
+              label="País de residencia"
+              type="text"
+              name="pais"
+              placeholder="Escribe tu país de residencia"
+              leyendaError="Entre 4 y 10 digitos esta bien 😜"
+              expresionRegular={expresiones.nombre}
+            />
+    
+        </Entradas>
         <ContenedorTerminos>
           <Label>
-            <input
-              type="checkbox"
-              name="terminos"
-              id="terminos"
-              checked={terminos}
-              onChange={checkTerminos}
-            />
-            Acepto los terminos y condiciónes
+            <input type="checkbox" name="terminos" id="terminos" checked={terminos} onChange={checkTerminos}/>
+            Deseo recibir información 
           </Label>
         </ContenedorTerminos>
-        {formValido === false && (
+
+
+        { formValido===false && (
           <MensajeError>
-            <div>
-              <FontAwesomeIcon icon={faExclamationTriangle} />
-              <p>
-                <b>Error:</b> Faltan cositas en el formulario por completar 😉
-              </p>
-            </div>
+           
+            <img src={errorImg} />
+              <div>              
+                <p>
+                <span>¡Ups! 😬 </span> 
+                </p>
+                <p>
+                ¡Faltan completar unos campos! 
+                </p>
+              </div>
+
           </MensajeError>
         )}
         <ContenedorBtnEnvio>
-          <Boton type="submit">Enviar</Boton>
-          {formValido === true && (
-            <MensajeExito>El Formulario se envio exitosamente!</MensajeExito>
-          )}
+          <Boton type="submit">Registrarme</Boton>
+       {formValido===true &&  
+       (
+        <MensajeExito>
+         
+          <img src={exitoImg} />
+            <div>              
+              <p>
+              <span>¡Registro Exitoso! 😍</span> 
+              </p>
+              <p>
+              ¡Felicidades! Tu emprendimiento ya es parte de HoldUp
+              </p>
+            </div>
+
+        </MensajeExito>
+      )       
+       
+       }
         </ContenedorBtnEnvio>
       </FormLabel>
-    </main>
+    </FormBody>
   );
 }
 export default Formulario;
