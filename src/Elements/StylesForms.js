@@ -6,36 +6,34 @@ const colores = {
   error: "#F64B3C",
   exito: "#0CCA6F",
   hover: "#196C84",
-  lightblue: '#196C84',
-  orange: '#F2966B',
-  darkblue:'#224E68'
+  lightblue: "#196C84",
+  orange: "#F2966B",
+  darkblue: "#224E68",
 };
 
 const FormBody = styled.section`
-display:flex;
-flex-direction:column;
-margin-top:7rem;
-
-`
+  display: flex;
+  flex-direction: column;
+  margin-top: 7rem;
+`;
 
 const Entradas = styled.div`
-
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 1rem;
-margin-bottom: 5rem;
-@media (max-width:800px){
-  grid-template-columns: 1fr;
-}
-`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
 const FormLabel = styled.form`
-  align-self:center;
-  display:flex;
+  align-self: center;
+  display: flex;
   flex-direction: column;
   margin: 5rem 0;
-  width:80%;
- 
+  width: 80%;
+
   @media (max-width: 800px) {
     display: flex;
     flex-direction: column;
@@ -46,25 +44,24 @@ const FormLabel = styled.form`
 `;
 
 const FormTitle = styled.div`
-  max-width:90vw;
-  h1{
-    color:${colores.lightblue};
+  max-width: 90vw;
+  h1 {
+    color: ${colores.lightblue};
     font-size: 4rem;
-    font-weight:800;
+    font-weight: 800;
     position: relative;
-    left:8%;
-    width:70vw;
-    @media (max-width:800px){
-      font-size:2.5rem;
-      width:80vw;
+    left: 8%;
+    width: 70vw;
+    @media (max-width: 800px) {
+      font-size: 2.5rem;
+      width: 80vw;
     }
-    
-    span{
+
+    span {
       color: ${colores.orange};
     }
   }
-`
-
+`;
 
 const Label = styled.label`
   display: block;
@@ -73,14 +70,14 @@ const Label = styled.label`
   padding: 10px;
   min-height: 40px;
   cursor: pointer;
-  color:${colores.lightblue}
+  color: ${colores.lightblue};
 `;
 
 const GrupoInput = styled.div`
   position: relative;
   z-index: 2;
-  display:flex;
-  flex-direction-column;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Input = styled.input`
@@ -92,8 +89,8 @@ const Input = styled.input`
   padding: 0 30px 0 10px;
   transition: 0.3s ease all;
   border: 1px solid gray;
-  @media (max-width:800px){
-    width:90%
+  @media (max-width: 800px) {
+    width: 90%;
   }
   &:focus {
     border: 3px solid ${colores.lightblue};
@@ -139,8 +136,7 @@ const IconoValidacion = styled(FontAwesomeIcon)`
   font-size: 24px;
   opacity: 0;
 
-  @media (max-width:800px){
-    
+  @media (max-width: 800px) {
   }
 
   ${(props) =>
@@ -161,8 +157,8 @@ const ContenedorTerminos = styled.div`
   grid-column: span 2;
   input {
     margin-right: 15px;
-    &:checked{
-      background-color:${colores.lightblue}
+    &:checked {
+      background-color: ${colores.lightblue};
     }
   }
 `;
@@ -198,24 +194,25 @@ const MensajeExito = styled.div`
   border-radius: 40px;
   justify-content: space-evenly;
   align-items: center;
-  align-self:center;
+  align-self: center;
   margin: 2rem 0;
 
-  img{
+  img {
     width: 3.5rem;
   }
   div {
-    width:70%;
-  display:flex;
-  flex-direction:column;}
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
   p {
-    color:white;
+    color: white;
     margin: 0;
     font-size: 0.7rem;
-    span{
-      font-weight:700;
+    span {
+      font-weight: 700;
       font-size: 1.5rem;
-    }  
+    }
   }
 `;
 
@@ -228,22 +225,23 @@ const MensajeError = styled.div`
   border-radius: 40px;
   justify-content: space-evenly;
   align-items: center;
-  align-self:center;
-  img{
+  align-self: center;
+  img {
     width: 4rem;
   }
   div {
-    width:50%;
-  display:flex;
-  flex-direction:column;}
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
   p {
-    color:white;
+    color: white;
     margin: 0;
     font-size: 0.7rem;
-    span{
-      font-weight:700;
+    span {
+      font-weight: 700;
       font-size: 1.8rem;
-    }  
+    }
   }
 `;
 
@@ -262,5 +260,5 @@ export {
   FormTitle,
   FormBody,
   colores,
-  Entradas
+  Entradas,
 };
