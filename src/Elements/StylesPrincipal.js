@@ -93,6 +93,10 @@ const Img = styled.img`
   }
 `;
 
+const ForoF = styled.div`
+display:flex;
+`;
+
 export {
   SecQueEs,
   Section,
@@ -104,4 +108,5 @@ export {
   SecComienza,
   DivBtn,
   Img,
+  ForoF
 };
