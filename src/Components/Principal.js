@@ -51,9 +51,7 @@ const Principal = () => {
             <Btn
               parrafo="Quiero participar como"
               persona="emprendedor/a"
-              descripcion="Si soy ciudadano puedo registrarme en la plataforma y dar ideas
-                de como los emprendedores pueden resolver sus retos apoyándolos
-                desde mi área de conocimiento"
+              descripcion="Si soy emprendedor puedo presentar los registrarme de mi proyecto a una gran comunidad de ciudadanos/as activos que me apoyarán a encontrar la mejor solución por medio de las ideas creativas"
               bgcolor={colores.darkblue}
               color={colores.orange}
             />
