@@ -11,6 +11,7 @@ import {
   DivBtn,
   BtnEmprendedor,
   BtnCiudadano,
+  ImgDescripcionCiud,
 } from "../Elements/StylesPrincipal";
 import { Link } from "react-router-dom";
 import imgFondo from "../Assets/images/bg-index.jpg";
@@ -81,10 +82,11 @@ const Principal = () => {
             </div>
           )} */}
           <Link to="/form">
-            <BtnCiudadano >
+            <BtnCiudadano>
               <p>Quiero participar como</p>
               <h2>ciudadano/a</h2>
             </BtnCiudadano>
+            <ImgDescripcionCiud src={imgCiudadanoDesc}></ImgDescripcionCiud>
             {/* <img
               src={imgCiudadano}
               onMouseOver={ImgHoverC}
@@ -93,13 +95,15 @@ const Principal = () => {
           </Link>
           {/* {imgC === true && (
             <div>
-              <img src={imgCiudadanoDesc}></img>
+              
             </div>
           )} */}
         </DivBtn>
-        <P>
-          Ya tengo <span>cuenta</span>
-        </P>
+        <Link to="/login">
+          <P>
+            Ya tengo <span>cuenta</span>
+          </P>
+        </Link>
       </SecComienza>
     </Section>
   );

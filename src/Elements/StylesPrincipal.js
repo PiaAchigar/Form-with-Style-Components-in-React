@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colores } from "./StylesApp";
+import imgEmprendedorDesc from "../Assets/images/emprenderorDescription.png";
 
 const Section = styled.section`
   @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap");
@@ -96,7 +97,10 @@ const BtnEmprendedor = styled.div`
     font-weight: 700;
   }
 `;
-
+const ImgDescripcionCiud = styled.img`
+  height: 15rem;
+  display: none;
+`;
 const BtnCiudadano = styled.div`
   display: flex;
   flex-direction: column;
@@ -107,6 +111,9 @@ const BtnCiudadano = styled.div`
   margin: 0.5rem;
   border-radius: 30rem;
   background-color: ${colores.verde};
+  &:hover ImgDescripcionCiud {
+    display: block;
+  }
   p {
     margin: 0;
     color: white;
@@ -120,6 +127,7 @@ const BtnCiudadano = styled.div`
     font-weight: 700;
   }
 `;
+
 const P = styled.p`
   font-weight: 600;
   font-size: 200%;
@@ -156,6 +164,7 @@ export {
   DivBtn,
   BtnEmprendedor,
   BtnCiudadano,
+  ImgDescripcionCiud,
   Img,
   ForoF,
 };
