@@ -9,32 +9,30 @@ import {
   P,
   SecComienza,
   DivBtn,
-  ImgEmprendedor,
-  ImgCiudadano,
+  BtnEmprendedor,
+  BtnCiudadano,
 } from "../Elements/StylesPrincipal";
 import { Link } from "react-router-dom";
 import imgFondo from "../Assets/images/bg-index.jpg";
 import imgFrame from "../Assets/images/Frame.png";
-import imgCiudadano from "../Assets/images/ciudadano.png";
 import imgCiudadanoDesc from "../Assets/images/ciudadanoDescription.png";
-import imgEmprededor from "../Assets/images/emprendedor.png";
 import imgEmprendedorDesc from "../Assets/images/emprenderorDescription.png";
 
 const Principal = () => {
-  const [img, setImg] = useState(false);
-  const [imgC, setimgC] = useState(false);
-  const ImgHover = () => {
-    setImg(true);
-  };
-  const ImgOut = () => {
-    setImg(false);
-  };
-  const ImgHoverC = () => {
-    setimgC(true);
-  };
-  const ImgOutC = () => {
-    setimgC(false);
-  };
+  // const [img, setImg] = useState(false);
+  // const [imgC, setimgC] = useState(false);
+  // const ImgHover = () => {
+  //   setImg(true);
+  // };
+  // const ImgOut = () => {
+  //   setImg(false);
+  // };
+  // const ImgHoverC = () => {
+  //   setimgC(true);
+  // };
+  // const ImgOutC = () => {
+  //   setimgC(false);
+  // };
 
   return (
     <Section>
@@ -68,29 +66,36 @@ const Principal = () => {
         <Ptitle>Comienza ahora</Ptitle>
         <DivBtn>
           <Link to="/retos">
-            <img
+            {/* onMouseOver={ImgHover} onMouseOut={ImgOut} */}
+            <BtnEmprendedor>
+              <p>Quiero participar como</p>
+              <h2>emprendedor/ra</h2>
+            </BtnEmprendedor>
+            {/* <img
               src={imgEmprededor}
-              onMouseOver={ImgHover}
-              onMouseOut={ImgOut}
-            ></img>
+            ></img> */}
           </Link>
-          {img === true && (
-            <ImgEmprendedor>
+          {/* {img === true && (
+            <div>
               <img src={imgEmprendedorDesc}></img>
-            </ImgEmprendedor>
-          )}
+            </div>
+          )} */}
           <Link to="/form">
-            <img
+            <BtnCiudadano >
+              <p>Quiero participar como</p>
+              <h2>ciudadano/a</h2>
+            </BtnCiudadano>
+            {/* <img
               src={imgCiudadano}
               onMouseOver={ImgHoverC}
               onMouseOut={ImgOutC}
-            ></img>
+            ></img> */}
           </Link>
-          {imgC === true && (
-            <ImgCiudadano>
+          {/* {imgC === true && (
+            <div>
               <img src={imgCiudadanoDesc}></img>
-            </ImgCiudadano>
-          )}
+            </div>
+          )} */}
         </DivBtn>
         <P>
           Ya tengo <span>cuenta</span>

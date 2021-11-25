@@ -60,15 +60,6 @@ const Ptitle = styled.p`
   font-size: 300%;
   color: ${colores.darkblue};
 `;
-const P = styled.p`
-  font-weight: 600;
-  font-size: 200%;
-  margin-right: 5em;
-  color: ${colores.darkblue};
-  span {
-    color: ${colores.orange};
-  }
-`;
 
 const SecComienza = styled.section`
   display: flex;
@@ -82,15 +73,73 @@ const DivBtn = styled.div`
   margin-top: 1rem;
 `;
 
-const ImgEmprendedor = styled.div`
-  position: absolute;
-  left: 0.5 em;
-`;
-const ImgCiudadano = styled.div`
-  position: absolute;
-  right: 7.4em;
+const BtnEmprendedor = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 26rem;
+  height: 15rem;
+  margin: 0.5rem;
+  border-radius: 30rem;
+  background-color: ${colores.darkblue};
+  p {
+    margin: 0;
+    color: white;
+    font-size: 200%;
+    font-weight: 600;
+  }
+  h2 {
+    margin: 0;
+    color: ${colores.orange};
+    font-size: 250%;
+    font-weight: 700;
+  }
 `;
 
+const BtnCiudadano = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 26rem;
+  height: 15rem;
+  margin: 0.5rem;
+  border-radius: 30rem;
+  background-color: ${colores.verde};
+  p {
+    margin: 0;
+    color: white;
+    font-size: 200%;
+    font-weight: 600;
+  }
+  h2 {
+    margin: 0;
+    color: ${colores.darkblue};
+    font-size: 250%;
+    font-weight: 700;
+  }
+`;
+const P = styled.p`
+  font-weight: 600;
+  font-size: 200%;
+  color: ${colores.darkblue};
+  span {
+    color: ${colores.orange};
+  }
+`;
+
+const Img = styled.img`
+  /* position: absolute;
+  left: 17em;
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden; */
+  /* &:hover {
+    opacity: 0;
+    visibility: hidden;
+  } */
+`;
 const ForoF = styled.div`
   display: flex;
 `;
@@ -105,6 +154,8 @@ export {
   P,
   SecComienza,
   DivBtn,
+  BtnEmprendedor,
+  BtnCiudadano,
   Img,
   ForoF,
 };

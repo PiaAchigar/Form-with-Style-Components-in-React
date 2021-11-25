@@ -29,6 +29,7 @@ const colores = {
   orange: "#F2966B",
   darkblue: "#224E68",
   cardblue: "#F4FBFF",
+  verde: "#70AF90",
 };
 
 export { Main, DivApp, colores };
