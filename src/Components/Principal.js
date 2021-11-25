@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { colores } from "../Elements/StylesApp";
 import {
   Section,
   Banner,
@@ -9,32 +9,13 @@ import {
   P,
   SecComienza,
   DivBtn,
-  BtnEmprendedor,
-  BtnCiudadano,
-  ImgDescripcionCiud,
 } from "../Elements/StylesPrincipal";
 import { Link } from "react-router-dom";
 import imgFondo from "../Assets/images/bg-index.jpg";
 import imgFrame from "../Assets/images/Frame.png";
-import imgCiudadanoDesc from "../Assets/images/ciudadanoDescription.png";
-import imgEmprendedorDesc from "../Assets/images/emprenderorDescription.png";
+import Btn from "./Btn";
 
 const Principal = () => {
-  // const [img, setImg] = useState(false);
-  // const [imgC, setimgC] = useState(false);
-  // const ImgHover = () => {
-  //   setImg(true);
-  // };
-  // const ImgOut = () => {
-  //   setImg(false);
-  // };
-  // const ImgHoverC = () => {
-  //   setimgC(true);
-  // };
-  // const ImgOutC = () => {
-  //   setimgC(false);
-  // };
-
   return (
     <Section>
       <Banner>
@@ -67,37 +48,27 @@ const Principal = () => {
         <Ptitle>Comienza ahora</Ptitle>
         <DivBtn>
           <Link to="/retos">
-            {/* onMouseOver={ImgHover} onMouseOut={ImgOut} */}
-            <BtnEmprendedor>
-              <p>Quiero participar como</p>
-              <h2>emprendedor/ra</h2>
-            </BtnEmprendedor>
-            {/* <img
-              src={imgEmprededor}
-            ></img> */}
+            <Btn
+              parrafo="Quiero participar como"
+              persona="emprendedor/a"
+              descripcion="Si soy ciudadano puedo registrarme en la plataforma y dar ideas
+                de como los emprendedores pueden resolver sus retos apoyándolos
+                desde mi área de conocimiento"
+              bgcolor={colores.darkblue}
+              color={colores.orange}
+            />
           </Link>
-          {/* {img === true && (
-            <div>
-              <img src={imgEmprendedorDesc}></img>
-            </div>
-          )} */}
           <Link to="/form">
-            <BtnCiudadano>
-              <p>Quiero participar como</p>
-              <h2>ciudadano/a</h2>
-            </BtnCiudadano>
-            <ImgDescripcionCiud src={imgCiudadanoDesc}></ImgDescripcionCiud>
-            {/* <img
-              src={imgCiudadano}
-              onMouseOver={ImgHoverC}
-              onMouseOut={ImgOutC}
-            ></img> */}
+            <Btn
+              parrafo="Quiero participar como"
+              persona="ciudadano/a"
+              descripcion="Si soy ciudadano puedo registrarme en la plataforma y dar ideas
+                de como los emprendedores pueden resolver sus retos apoyándolos
+                desde mi área de conocimiento"
+              bgcolor={colores.verde}
+              color={colores.darkblue}
+            />
           </Link>
-          {/* {imgC === true && (
-            <div>
-              
-            </div>
-          )} */}
         </DivBtn>
         <Link to="/login">
           <P>
