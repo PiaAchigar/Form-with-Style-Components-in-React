@@ -34,18 +34,41 @@ const DivCiudadano = styled.div`
     font-size: 150%;
     font-weight: 600;
     width: 25rem;
-    height: 11rem;
+    min-height: 11rem;
     margin: 0.5rem;
     border-radius: 5rem;
     background-color: ${(props) => props.Bgcolor};
-    z-index: 99;
-    display: none;
+    /* display: none; */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-out;
   }
   &:hover {
     div {
-      display: block;
-      transition: 3s;
-      transform: translateY(10px);
+      /* display: block; */
+      animation: abrir 1s ease-out;
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  /* :not(:hover) {
+    animation: cerrar 1s ease-out;
+  } */
+  @keyframes abrir {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(5px);
+    }
+  }
+  @keyframes cerrar {
+    from {
+      transform: translateY(5px);
+    }
+    to {
+      transform: translateY(0);
     }
   }
 `;
