@@ -5,7 +5,6 @@ import {
   Content,
   SecCont,
   SecQueEs,
-  Ptitle,
   P,
   SecComienza,
   DivBtn,
@@ -36,16 +35,16 @@ const Principal = () => {
       </Banner>
       <SecCont>
         <SecQueEs>
-          <Ptitle>¿Qué es el hold_up?</Ptitle>
-          <P>
+          <h2>¿Qué es el hold_up?</h2>
+          <p>
             Plataforma de co-creación entre emprendedores socioambientales y
             ciudadanos para dar solución a un reto específico de un proyecto.
-          </P>
+          </p>
         </SecQueEs>
         <img src={imgFrame}></img>
       </SecCont>
       <SecComienza>
-        <Ptitle>Comienza ahora</Ptitle>
+        <h2>Comienza ahora</h2>
         <DivBtn>
           <Link to="/retos">
             <Btn
