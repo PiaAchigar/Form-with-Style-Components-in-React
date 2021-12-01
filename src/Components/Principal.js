@@ -28,7 +28,7 @@ const Principal = () => {
             <br /> el hold-up!
           </h1>
           <p>
-            Explora la plataforma y ayuda a emprendedorxs a resolver retos de su
+            Explora la plataforma y ayuda a emprendedores/as a resolver retos de su
             proyecto a través de la inteligencia colectiva
           </p>
         </Content>

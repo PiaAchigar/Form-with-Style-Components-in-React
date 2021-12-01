@@ -61,6 +61,17 @@ const Content = styled.section`
       margin: 0;
     }
   }
+  @media (min-width: 1200px) {
+    max-width: 50rem;
+    top: 3rem;
+    h1 {
+      font-size: 440%;
+    }
+    p {
+      font-size: 260%;
+      margin: 0;
+    }
+  }
 `;
 const SecCont = styled.section`
   display: flex;
@@ -75,8 +86,12 @@ const SecCont = styled.section`
     width: 1.5em;
     height: 2em;
     @media (min-width: 768px) {
-      width: 7em;
-      height: 6em;
+      width: 6em;
+      height: 7em;
+    }
+    @media (min-width: 1200px) {
+      width: 11rem;
+      height: 12rem;
     }
   }
 `;
@@ -112,6 +127,14 @@ const SecQueEs = styled.section`
       font-size: 180%;
     }
   }
+  @media (min-width: 1200px) {
+    h2 {
+      font-size: 410%;
+    }
+    p {
+      font-size: 200%;
+    }
+  }
 `;
 
 const SecComienza = styled.section`
@@ -123,15 +146,14 @@ const SecComienza = styled.section`
     font-weight: 800;
     font-size: 150%;
     color: ${colores.darkblue};
-  }
-  @media (min-width: 425px) {
-    h2 {
+    @media (min-width: 425px) {
       font-size: 180%;
     }
-  }
-  @media (min-width: 425px) {
-    h2 {
+    @media (min-width: 768px) {
       font-size: 220%;
+    }
+    @media (min-width: 1200px) {
+      font-size: 410%;
     }
   }
 `;
@@ -148,6 +170,9 @@ const P = styled.p`
   span {
     color: ${colores.orange};
   }
+  @media (min-width: 1200px) {
+      font-size: 220%;
+    }
 `;
 
 const ForoF = styled.div`

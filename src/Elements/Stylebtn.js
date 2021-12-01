@@ -48,6 +48,16 @@ const DivPersona = styled.div`
         font-size: 150%;
       }
     }
+    @media (min-width: 1200px) {
+      width: 25rem;
+      height: 13rem;
+      p {
+        font-size: 180%;
+      }
+      h2 {
+        font-size: 240%;
+      }
+    }
   }
   div {
     text-align: center;
@@ -68,7 +78,12 @@ const DivPersona = styled.div`
       width: 9rem;
     }
     @media (min-width: 768px) {
-      width: 15rem;
+      font-size: 100%;
+      width: 13rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 130%;
+      width: 20rem;
     }
   }
   &:hover {
