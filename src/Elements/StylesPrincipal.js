@@ -163,7 +163,7 @@ const DivBtn = styled.div`
   margin-top: 1rem;
 `;
 
-const P = styled.p`
+const BtnLogin = styled.button`
   font-weight: 600;
   font-size: 180%;
   color: ${colores.darkblue};
@@ -171,12 +171,8 @@ const P = styled.p`
     color: ${colores.orange};
   }
   @media (min-width: 1200px) {
-      font-size: 220%;
-    }
-`;
-
-const ForoF = styled.div`
-  display: flex;
+    font-size: 220%;
+  }
 `;
 
 export {
@@ -185,8 +181,7 @@ export {
   Content,
   SecCont,
   Banner,
-  P,
+  BtnLogin,
   SecComienza,
   DivBtn,
-  ForoF,
 };

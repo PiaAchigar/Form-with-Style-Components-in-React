@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { colores } from "../Elements/StylesApp";
 import {
   Section,
@@ -5,7 +6,7 @@ import {
   Content,
   SecCont,
   SecQueEs,
-  P,
+  BtnLogin,
   SecComienza,
   DivBtn,
 } from "../Elements/StylesPrincipal";
@@ -13,8 +14,14 @@ import { Link } from "react-router-dom";
 import imgFondo from "../Assets/images/bg-index.jpg";
 import imgFrame from "../Assets/images/Frame.png";
 import Btn from "./Btn";
+import Modal from "./Modal";
 
 const Principal = () => {
+  const [active, setActive] = useState(false);
+  const toggle = () => {
+    setActive(!active);
+  };
+
   return (
     <Section>
       <Banner>
@@ -28,8 +35,8 @@ const Principal = () => {
             <br /> el hold-up!
           </h1>
           <p>
-            Explora la plataforma y ayuda a emprendedores/as a resolver retos de su
-            proyecto a través de la inteligencia colectiva
+            Explora la plataforma y ayuda a emprendedores/as a resolver retos de
+            su proyecto a través de la inteligencia colectiva
           </p>
         </Content>
       </Banner>
@@ -67,11 +74,12 @@ const Principal = () => {
             />
           </Link>
         </DivBtn>
-        <Link to="/login">
-          <P>
-            Ya tengo <span>cuenta</span>
-          </P>
-        </Link>
+        <BtnLogin onClick={toggle}>
+          Ya tengo <span>cuenta</span>
+        </BtnLogin>
+        <Modal active={active} toggle={toggle}>
+          <h1>Soy un Modal</h1>
+        </Modal>
       </SecComienza>
     </Section>
   );

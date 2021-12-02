@@ -1,11 +1,17 @@
 import React from "react";
-import { ForoF } from "../Elements/StylesPrincipal";
+import { Div } from "../Elements/StylesLogin";
 
 const Login = () => {
   return (
-    <ForoF>
-      <h1>En construccion...</h1>
-    </ForoF>
+    <Div>
+      <section>
+        <p>E-mail</p>
+        <input placeholder="xxxxx@gmail.com"/>
+        <p>Password</p>
+        <input placeholder="xxxxxxxx"/>
+      </section>
+
+    </Div>
   );
 };
 
