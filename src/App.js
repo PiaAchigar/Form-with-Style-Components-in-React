@@ -7,7 +7,7 @@ import Formulario from "./Components/Form";
 import Index from "./Components/Principal";
 import Retos from "./Components/retos/Retos";
 import Foro from "./Components/Foro/Foro";
-import Login from "./Components/Login";
+import Login from "./Components/Login"; /** todo: Tengo q sacarlo, estoy usando Modal */
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 

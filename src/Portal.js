@@ -1,0 +1,28 @@
+/*Solo ayuda a renderizar los popup en el div del portal -  el 100% funcional*/
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+
+const portalRoot = document.getElementById("portal");
+
+export default class Portal extends Component {
+  constructor() {
+    super();
+    this.el = document.createElement("div");
+  }
+
+  componentDidMount = () => {
+    portalRoot.appendChild(this.el);
+  };
+
+  componentWillUnmount = () => {
+    portalRoot.removeChild(this.el);
+  };
+
+  render() {
+    const { children } = this.props;
+    return ReactDOM.createPortal(
+      children,
+      this.el
+    ); /*Quiero renderizar el children dentro del elemento que hay en "this.el"*/
+  }
+}
