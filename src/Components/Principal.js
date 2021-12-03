@@ -78,7 +78,12 @@ const Principal = () => {
           Ya tengo <span>cuenta</span>
         </BtnLogin>
         <Modal active={active} toggle={toggle}>
-          <h1>Soy un Modal</h1>
+          <section>
+            <p>E-mail</p>
+            <input placeholder="xxxxx@gmail.com" />
+            <p>Password</p>
+            <input placeholder="xxxxxxxx" />
+          </section>
         </Modal>
       </SecComienza>
     </Section>
