@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colores } from "../StylesApp";
 
 const Botonera = styled.section`
-margin-top:8rem;
+margin-top:0rem;/**estaba con 8rem */
 height: 5rem;
 display:flex;
 justify-content:flex-end;

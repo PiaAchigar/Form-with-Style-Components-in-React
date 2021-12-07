@@ -8,12 +8,14 @@ import Index from "./Components/Principal";
 import Retos from "./Components/retos/Retos";
 import Foro from "./Components/Foro/Foro";
 import Login from "./Components/Login"; /** todo: Tengo q sacarlo, estoy usando Modal */
+import ScrollToTop from "./Components/ScrollToTop";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <DivApp>
         <Header></Header>
         <Routes>

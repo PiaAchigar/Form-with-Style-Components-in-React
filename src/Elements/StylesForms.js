@@ -5,7 +5,7 @@ import { colores } from "./StylesApp";
 const FormBody = styled.section`
   display: flex;
   flex-direction: column;
-  margin-top: 7rem;
+  margin-top: 0rem; /* estaba en 7rem */
 `;
 
 const Entradas = styled.div`
@@ -250,5 +250,5 @@ export {
   MensajeError,
   FormTitle,
   FormBody,
-  Entradas
+  Entradas,
 };
